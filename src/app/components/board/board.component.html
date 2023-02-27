@@ -1,0 +1,32 @@
+<main class="container">
+  <div class="header">
+    <h1>KANBAN</h1>
+    <button id="showBtn" class="show-form" (click)="showTaskForm()">
+      Add Task
+    </button>
+  </div>
+  <section id="taskForm" class="task-form display-none">
+    <form>
+      <input
+        id="nameTask"
+        type="text"
+        name="task"
+        placeholder="Task name"
+        [formControl]="taskName"
+      />
+      <input
+        id="estTask"
+        type="text"
+        name="submit"
+        placeholder="Task estimation"
+        [formControl]="taskEst"
+      />
+    </form>
+  </section>
+  <app-tasks-container></app-tasks-container>
+  <div class="footer">
+    <h4>Organize your tasks here!</h4>
+    <h5>&copy; Copyright 2023 dariogmzfdz</h5>
+  </div>
+  <div id="snackbar">Please, fill all inputs</div>
+</main>
